@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Patient Stories at LUMEN</title>
+    <meta name="description" content="Read success stories from our patients. See how LUMEN has helped people in Hansi, Hisar, and Bhiwani improve their lives through better hearing and speech.">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="fade-in">Stories of Renewed Connection</h1>
+                <p class="fade-in" data-delay="0.2">Hear directly from the people whose lives we've touched.</p>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container slide-up">
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/810775/pexels-photo-810775.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Patient photo" class="testimonial-img">
+                            <div class="star-rating">★★★★★</div>
+                            <blockquote>"The team at LUMEN is exceptional. They were so patient in finding the right hearing aids for my father. For the first time in years, he can enjoy family conversations. It's priceless."</blockquote>
+                            <cite>Ravi K. | Hansi</cite>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Patient photo" class="testimonial-img">
+                            <div class="star-rating">★★★★★</div>
+                            <blockquote>"My daughter's confidence has soared since starting speech therapy here. The therapists are skilled, and they make the sessions fun. I'm so grateful for their support."</blockquote>
+                            <cite>Sunita S. | Hisar</cite>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Patient photo" class="testimonial-img">
+                            <div class="star-rating">★★★★★</div>
+                            <blockquote>"A truly professional and high-tech clinic. The diagnostic process was thorough, and they explained my hearing loss in a way I could finally understand. Highly recommended."</blockquote>
+                            <cite>Amit G. | Bhiwani</cite>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize Swiper after main.js runs
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.testimonials-slider', {
+                loop: true,
+                autoplay: { delay: 6000, disableOnInteraction: false },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            });
+        });
+    </script>
+</body>
+</html>
